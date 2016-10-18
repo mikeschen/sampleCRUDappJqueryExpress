@@ -27,11 +27,7 @@ window.addEventListener('load', function() {
     console.log('deleteclicked');
     $.ajax ({
       url:'/quotes',
-      type: 'DELETE',
-      // data: {
-      //   name: "replaces name",
-      //   description: "replaces descrip"
-      // },
+      method: 'DELETE',
       success: function (result){
         console.log("response2");
         window.location.reload(true);
