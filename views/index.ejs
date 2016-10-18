@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hellllooo</title>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form action = "/quotes" method="POST">
+      <input type="text" name = "name">
+      </input>
+      <input type="text" name = "description">
+      </input>
+      <button type="submit">Submit</button>
+    </form>
+    <div>
+      <p><%= data.name %></p>
+      <ul>
+        <% for (var i = 0; i < result.length; i++) {%>
+          <span><%= result [i].name %></span>
+          <span><%= result [i].description %></span>
+        <% } %>
+      </ul>
+      <ul>
+        <% for (var j = 0; j < data.productList.length; j++) {%>
+        <li><%= data.productList [j].name %></li>
+        <% } %>
+      </ul>
+    </div>
+    <div id="update">
+      <button type="click" name= "click">Click</button>
+    </div>
+    <div id="delete">
+      <button type="click" name="delete">delete</button>
+    </div>
+  </body>
+</html>
